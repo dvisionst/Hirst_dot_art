@@ -21,9 +21,9 @@
 
 
 
+import random
 import turtle
 from turtle import Turtle, Screen
-import random
 
 
 def hirst_art(my_turtle):
@@ -42,12 +42,15 @@ color_list = [(167, 77, 38), (24, 115, 157), (216, 150, 90), (19, 35, 28), (188,
 
 h_turtle = Turtle()
 my_screen = Screen()
-h_turtle_x = 0
-h_turtle_y = 0
-
-for rows in range(9):
+h_turtle_x = -250
+h_turtle_y = -200
+number_of_dots = 10
+h_turtle.hideturtle()
+for rows in range(1, number_of_dots):
+    h_turtle.penup()
     h_turtle.setposition(h_turtle_x, h_turtle_y)
-    for dots in range(9):
+    h_turtle.pendown()
+    for dots in range(1, number_of_dots):
         h_turtle.speed("fastest")
         hirst_art(h_turtle)
         h_turtle.penup()
